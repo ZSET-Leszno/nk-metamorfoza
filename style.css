@@ -77,8 +77,7 @@ header div {
     text-align: center;
     flex-direction: column;
     color: white;
-    backdrop-filter: brightness(0.3);
-    -webkit-backdrop-filter: brightness(0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     padding: 0 10%;
 }
 
