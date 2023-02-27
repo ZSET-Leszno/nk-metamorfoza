@@ -1,15 +1,19 @@
 addEventListener("scroll", (event) => {
-    dark();
     if (isInViewport(document.getElementsByClassName('slide')[0])) {
-        console.log("s");
         slides();
     }
 });
 
-addEventListener("DOMContentLoaded", (event) => {
-    dark();
+addEventListener("DOMContentLoaded", async (event) => {
+    var pierwszynapis = "Cos tam cos tam";
+    writing("header", pierwszynapis, 40);
+    await sleep(50 * parseInt(pierwszynapis.length));
+    writing("header2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", 25);
 })
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -21,17 +25,16 @@ function isInViewport(element) {
     );
 }
 
-function dark() {
-    var maxHeight = screen.height;
-    var scrollHeight = window.scrollY;
-    var dark = maxHeight / (maxHeight - scrollHeight * 0.5) * 0.7 ;
-    document.getElementById("dark").style = "background-color: rgba(0, 0, 0, "+ dark +");"
-}
-
 function slides() {
-    console.log("s");
     document.getElementById('slide-left').style = "transform: translateX(0); -webkit-transform: translateX(0);";
     document.getElementById('slide-right').style = "transform: translateX(0); -webkit-transform: translateX(0);";
     document.getElementById('slide-left1').style = "transform: translateX(0); -webkit-transform: translateX(0);";
     document.getElementById('slide-right2').style = "transform: translateX(0); -webkit-transform: translateX(0);";
+}
+
+async function writing(id, napis, wait) {
+    for (var i = 0; i <= napis.length; i++) {
+        document.getElementById(id).innerHTML = napis.substring(0, i);
+        await sleep(wait);
+    }
 }
