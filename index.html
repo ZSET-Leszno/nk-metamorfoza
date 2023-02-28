@@ -9,45 +9,59 @@
 </head>
 <body>
     <nav>
-        <span><img src="img/logowhite.svg" alt="logo"></span>
+        <span><img src="img/logoblack.svg" alt="logo"></span>
         <div>
             <a href="#">Strona główna</a>
             <a href="#">Usługi</a>
             <a href="#">Usługi</a>
             <a href="#">Usługi</a>
         </div>
+        <div></div>
     </nav>
     <header>
-        <div id="dark">
+        <div class="dark">
             <h1 id="header"></h1>
             <h2 id="header2"></h2>
+            <div id="arrow" onclick="document.getElementById('cards').scrollIntoView({behavior: 'smooth'})"></div>
         </div>
     </header>
     <main>
         <div id="cards" class="wrap">
-                <div class="card card-top">
-                    <img src="img/media/17.jpg" alt="obraz">
+            <div class="card pre-card card-top">
+                <img src="img/media/20.jpg" alt="obraz">
+            </div>
+            <div class="card pre-card card-top">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            </div>
+            <div class="card pre-card card-top card-poof">
+                <img src="img/media/20.jpg" alt="obraz">
+            </div>
+            <div class="card pre-card card-top card-poof">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            </div>
+            <div class="card pre-card card-bottom">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            </div>
+            <div class="card pre-card card-left card-bottom">
+                <img src="img/media/20.jpg" alt="obraz">
+            </div>
+            <div class="card pre-card card-bottom card-poof">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            </div>
+            <div class="card pre-card card-bottom card-poof">
+                <img src="img/media/20.jpg" alt="obraz">
+            </div>
+        </div>
+        <div id="information">
+            <div class="dark wrap">
+                <div id="opened" class="border slide">
+                    <h3 style="padding-bottom: 400px;">Godziny otwarcia</h3>
                 </div>
-                <div class="card card-top">
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <div id="localization" class="border slide">
+                    <h3 style="padding-bottom: 400px;">Lokalizacja</h3>
                 </div>
-                <div class="card card-top card-poof">
-                    <img src="img/media/17.jpg" alt="obraz">
-                </div>
-                <div class="card card-top card-poof">
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                </div>
-                <div class="card card-bottom">
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                </div>
-                <div class="card card-left card-bottom">
-                    <img src="img/media/17.jpg" alt="obraz">
-                </div>
-                <div class="card card-bottom card-poof">
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                </div>
-                <div class="card card-bottom card-poof">
-                    <img src="img/media/17.jpg" alt="obraz">
+                <div id="services" class="border slide2">
+                    <h3 style="padding-bottom: 600px;">Usługi</h3>
                 </div>
             </div>
         </div>
