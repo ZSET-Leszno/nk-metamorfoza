@@ -197,7 +197,7 @@ header h2 {
 }
 
 #information {
-    background: url("img/media/15.jpg");
+    background: url("img/media/4.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -206,55 +206,38 @@ header h2 {
 }
 
 #information > div {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-#opened {
-    grid-column-start: auto;
-    grid-column-end: auto;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    transform: translate(-200%); 
-    -webkit-transform: translate(-200%);
-}
-
-#localization {
-    grid-column-start: auto;
-    grid-column-end: auto;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    transform: translate(200%); 
-    -webkit-transform: translate(200%);
-}
-
 #services {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    transform: translate(0, 200%); 
-    -webkit-transform: translate(0, 200%);
+    /* transform: translate(0, 200%); 
+    -webkit-transform: translate(0, 200%); */
 }
 
-#information h3 {
-    text-align: center;
+#services > div {
     padding: 10px 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    margin-right: 10px;
+    margin-bottom: -20px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
 }
 
 .slide, .slide2 {
     transition: 1s transform;
     -webkit-transition: 1s -webkit-transform;
-}
-
-.border {
-    border: 3px solid white;
 }
 
 @media screen and (max-width: 1000px) {
@@ -266,21 +249,6 @@ header h2 {
     }
     .card-poof {
         display: none;
-    }
-    #information > div {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    #localization {
-        grid-column-start: auto;
-        grid-column-end: auto;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    #services {
-        grid-column-start: auto;
-        grid-column-end: auto;
-        grid-row-start: 3;
-        grid-row-end: 4;
     }
     nav > div {
         display: none;

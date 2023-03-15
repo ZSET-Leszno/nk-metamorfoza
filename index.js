@@ -7,18 +7,15 @@ addEventListener("scroll", (event) => {
     if (rect2.top < 650) {
         slideIn('slide');
     }
-    if (rect2.top < 100) {
-        slideIn('slide2');
-    }
 });
 
 addEventListener("DOMContentLoaded", async (event) => {
     var pierwszynapis = "NK Metamorfoza";
     writing("header", pierwszynapis, 40);
-    await sleep(50 * parseInt(pierwszynapis.length));
+    await sleep(45 * parseInt(pierwszynapis.length));
     var druginapis = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
-    writing("header2", druginapis, 25);
-    await sleep(25 * parseInt(druginapis.length));
+    writing("header2", druginapis, 17);
+    await sleep(17 * parseInt(druginapis.length));
     fadeIn("arrow");
 })
 
