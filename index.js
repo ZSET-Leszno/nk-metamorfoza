@@ -3,9 +3,13 @@ addEventListener("scroll", (event) => {
     if (rect.top < 650) {
         cards();
     }
-    const rect2 = document.getElementById('information').getBoundingClientRect();
+    const rect2 = document.getElementById('services').getBoundingClientRect();
     if (rect2.top < 650) {
         slideIn('slide');
+    }
+    const rect3 = document.getElementById('services').getBoundingClientRect();
+    if (rect3.top < 650 && document.getElementById('services-text').innerHTML == "") {
+        writing("services-text", "Sprawdź naszą gamę usług", 25);
     }
 });
 
@@ -13,7 +17,7 @@ addEventListener("DOMContentLoaded", async (event) => {
     var pierwszynapis = "NK Metamorfoza";
     writing("header", pierwszynapis, 40);
     await sleep(45 * parseInt(pierwszynapis.length));
-    var druginapis = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+    var druginapis = "Salon fryzjersko-kosmetyczny w Lesznie";
     writing("header2", druginapis, 17);
     await sleep(17 * parseInt(druginapis.length));
     fadeIn("arrow");
@@ -45,5 +49,18 @@ function slideIn(klasa) {
     var slides = document.getElementsByClassName(klasa);
     for (i = 0; i < slides.length; i++) {
         slides[i].style = "transform: translate(0); -webkit-transform: translate(0);";
+    }
+}
+
+function expand(index) {
+    var arrows = document.getElementsByClassName("arrow");
+    if (document.getElementById("category" + index).offsetHeight > 0) {
+        arrows[index].style = "";
+        document.getElementById("category" + index).style = "";
+    } else {
+        var list = document.getElementById("category" + index).children;
+        var height = list.length * list[0].offsetHeight;
+        document.getElementById("category" + index).style.maxHeight = height + "px";
+        arrows[index].style = "transform: rotate(45deg); -webkit-transform: rotate(45deg); margin-bottom: 0";
     }
 }

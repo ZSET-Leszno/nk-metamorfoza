@@ -196,7 +196,7 @@ header h2 {
     font-size: 1.4em;
 }
 
-#information {
+#services {
     background: url("img/media/4.jpg");
     background-position: center;
     background-size: cover;
@@ -205,23 +205,42 @@ header h2 {
     overflow: hidden;
 }
 
-#information > div {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-#services {
-    /* transform: translate(0, 200%); 
-    -webkit-transform: translate(0, 200%); */
+#services h2 {
+    font-size: 1.9rem;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 #services > div {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#services-inner {
+    transform: translate(0, 200%); 
+    -webkit-transform: translate(0, 200%);
+}
+
+#services-inner .category {
     padding: 10px 0;
-    font-size: 1.5rem;
     border-bottom: 2px solid white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+}
+
+#services-inner > div h3 {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+
+#services-inner > div img {
+    height: 25px;
+    margin-right: 10px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(258deg) brightness(104%) contrast(103%);
+    -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(258deg) brightness(104%) contrast(103%);
 }
 
 .arrow {
@@ -233,6 +252,33 @@ header h2 {
     margin-bottom: -20px;
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+}
+
+.expand {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+}
+
+.expand > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    margin: 0 15px;
+    font-size: 1.25rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.expand > div:first-child {
+    padding: 8px 0 4px 0;
+}
+
+.expand span {
+    margin-left: auto;
+    display: inline-block;
 }
 
 .slide, .slide2 {
