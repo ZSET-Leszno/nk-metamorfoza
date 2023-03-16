@@ -197,7 +197,7 @@ header h2 {
 }
 
 #services {
-    background: url("img/media/4.jpg");
+    background: url("img/media/7.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -212,8 +212,8 @@ header h2 {
 }
 
 #services > div {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 #services-inner {
@@ -249,9 +249,8 @@ header h2 {
     border-right: 3px solid white;
     border-bottom: 3px solid white;
     margin-right: 10px;
-    margin-bottom: -20px;
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     transition: 0.2s;
     -webkit-transition: 0.2s;
 }
@@ -269,11 +268,14 @@ header h2 {
     padding: 4px 0;
     margin: 0 15px;
     font-size: 1.25rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .expand > div:first-child {
     padding: 8px 0 4px 0;
+}
+
+.expand > div:nth-child(2n) {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .expand span {
@@ -281,9 +283,42 @@ header h2 {
     display: inline-block;
 }
 
+#services a {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    display: inline-block;
+    margin: 40px auto 0 auto;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s transform;
+    -webkit-transition: 0.2s transform;
+}
+
+#services a:hover {
+    transform: scale(0.98);
+}
+
 .slide, .slide2 {
     transition: 1s transform;
     -webkit-transition: 1s -webkit-transform;
+}
+
+#information {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 30px 0;
+}
+
+#map {
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 1000px) {

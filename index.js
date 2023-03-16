@@ -7,8 +7,7 @@ addEventListener("scroll", (event) => {
     if (rect2.top < 650) {
         slideIn('slide');
     }
-    const rect3 = document.getElementById('services').getBoundingClientRect();
-    if (rect3.top < 650 && document.getElementById('services-text').innerHTML == "") {
+    if (rect2.top < 650 && document.getElementById('services-text').innerHTML == "") {
         writing("services-text", "Sprawdź naszą gamę usług", 25);
     }
 });
@@ -61,6 +60,6 @@ function expand(index) {
         var list = document.getElementById("category" + index).children;
         var height = list.length * list[0].offsetHeight;
         document.getElementById("category" + index).style.maxHeight = height + "px";
-        arrows[index].style = "transform: rotate(45deg); -webkit-transform: rotate(45deg); margin-bottom: 0";
+        arrows[index].style = "transform: rotate(-135deg); -webkit-transform: rotate(-135deg); margin-bottom: -20px";
     }
 }
