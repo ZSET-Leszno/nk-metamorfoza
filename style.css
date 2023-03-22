@@ -219,6 +219,8 @@ header h2 {
 #services-inner {
     transform: translate(0, 200%); 
     -webkit-transform: translate(0, 200%);
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 #services-inner .category {
