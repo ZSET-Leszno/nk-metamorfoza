@@ -54,12 +54,12 @@ function slideIn(klasa) {
 function expand(index) {
     var arrows = document.getElementsByClassName("arrow");
     if (document.getElementById("category" + index).offsetHeight > 0) {
-        arrows[index].style = "";
+        arrows[index - 1].style = "";
         document.getElementById("category" + index).style = "";
     } else {
         var list = document.getElementById("category" + index).children;
         var height = list.length * list[0].offsetHeight;
         document.getElementById("category" + index).style.maxHeight = height + "px";
-        arrows[index].style = "transform: rotate(-135deg); -webkit-transform: rotate(-135deg); margin-bottom: -20px";
+        arrows[index - 1].style = "transform: rotate(-135deg); -webkit-transform: rotate(-135deg); margin-bottom: -20px";
     }
 }
