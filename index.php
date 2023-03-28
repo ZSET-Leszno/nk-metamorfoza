@@ -57,30 +57,33 @@
                 <h2 id="services-text"></h2>
                 <div id="services-inner" class="slide">
                     <?php
-
-                        require_once("baza.php");
-                        $connection = new mysqli("localhost", $dbuser, $dbpassword, $dbname);
-                        $query = $connection->query("SELECT * FROM kategorie");
-                        while($category = $query->fetch_assoc()) {
-                            echo '
-                            <div class="category" onclick="expand('.mb_convert_case($category["id"], MB_CASE_TITLE, "UTF-8").');">
-                                <h3><img src="img/category'.$category["id"].'.svg">'.ucfirst($category["nazwa"]).'</h3>
-                                <div class="arrow"></div>
-                            </div>
-                        ';
-                        echo '<div class="expand" id="category'.$category["id"].'">';
-                        $query2 = $connection->query("SELECT * FROM uslugi WHERE kategoria = ".$category["id"]);
-                        while($service = $query2->fetch_assoc()) {
-                            echo '
-                                <div>
-                                    <p>'.mb_convert_case($service["nazwa"], MB_CASE_TITLE, "UTF-8").'</p>
-                                    <span>'.$service["cena"].' zł</span>
+                        try {
+                            require_once("baza.php");
+                            $connection = new mysqli("localhost", $dbuser, $dbpassword, $dbname);
+                            $query = $connection->query("SELECT * FROM kategorie");
+                            while($category = $query->fetch_assoc()) {
+                                echo '
+                                <div class="category" onclick="expand('.mb_convert_case($category["id"], MB_CASE_TITLE, "UTF-8").');">
+                                    <h3><img src="img/category'.$category["id"].'.svg">'.ucfirst($category["nazwa"]).'</h3>
+                                    <div class="arrow"></div>
                                 </div>
                             ';
+                            echo '<div class="expand" id="category'.$category["id"].'">';
+                            $query2 = $connection->query("SELECT * FROM uslugi WHERE kategoria = ".$category["id"]);
+                            while($service = $query2->fetch_assoc()) {
+                                echo '
+                                    <div>
+                                        <p>'.mb_convert_case($service["nazwa"], MB_CASE_TITLE, "UTF-8").'</p>
+                                        <span>'.$service["cena"].' zł</span>
+                                    </div>
+                                ';
+                                }
+                                echo '</div>';
                             }
-                            echo '</div>';
+                            $connection->close();
+                        } catch (Exception $e) {
+                            echo $e->getMessage();
                         }
-                        $connection->close();
 
                     ?>
                     <div style="text-align: center;">
