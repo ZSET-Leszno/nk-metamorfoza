@@ -11,15 +11,14 @@
     <nav>
         <span><img src="img/logoblack.svg" alt="logo"></span>
         <div>
-            <a href="#">Strona główna</a>
             <a href="#">Usługi</a>
-            <a href="#">Kontakt</a>
             <a href="#">Rezerwacja</a>
+            <a href="#">Kontakt</a>
         </div>
         <div></div>
     </nav>
     <header>
-        <div class="dark">
+        <div class="dark">          
             <h1 id="header"></h1>
             <h2 id="header2"></h2>
             <div id="arrow" onclick="document.getElementById('cards').scrollIntoView({behavior: 'smooth'})"></div>

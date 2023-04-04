@@ -8,7 +8,7 @@ addEventListener("scroll", (event) => {
         slideIn('slide');
     }
     if (rect2.top < 650 && document.getElementById('services-text').innerHTML == "") {
-        writing("services-text", "Sprawdź naszą gamę usług", 25);
+        writing("services-text", "Zapoznaj się z naszymi usługami:", 25);
     }
 });
 
@@ -16,7 +16,7 @@ addEventListener("DOMContentLoaded", async (event) => {
     var pierwszynapis = "NK Metamorfoza";
     writing("header", pierwszynapis, 40);
     await sleep(45 * parseInt(pierwszynapis.length));
-    var druginapis = "Salon fryzjersko-kosmetyczny w Lesznie";
+    var druginapis = "Salon Fryzjersko-Kosmetyczny w Lesznie";
     writing("header2", druginapis, 17);
     await sleep(17 * parseInt(druginapis.length));
     fadeIn("arrow");
