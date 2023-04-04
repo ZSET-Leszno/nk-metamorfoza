@@ -70,10 +70,11 @@ nav div a:hover::after {
 }
 
 header {
-    background: url("img/media/baner.jpg");
+    background: url("img/media/tapeta.jpeg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    filter: grayscale(0.3);
 }
 
 header > div {
