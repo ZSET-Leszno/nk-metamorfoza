@@ -70,7 +70,7 @@ nav div a:hover::after {
 }
 
 header {
-    background: url("img/media/tapeta.jpeg");
+    background: url("img/media/wstep.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -198,7 +198,7 @@ header h2 {
 }
 
 #services {
-    background: url("img/media/tabelka.jpg");
+    background: url("img/media/tlo.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
