@@ -96,10 +96,6 @@
                 NK Metamorfoza to salon fryzjersko-kosmetyczny, oferujący szeroką gamę usług związanych z fryzjerstwem, manicure, pedicure, makijażem, zabiegami skóry i ciała, depilacją i wiele więcej. Salon stawia na profesjonalne produkty i obsługę.
                 Zachęcamy do skorzystania z naszych usług. Prowadzimy program rabatowy dla naszych klientów.
             </p>
-            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d377.1575013679952!2d16.564100580201547!3d51.84317246562552!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47059826f143ec83%3A0xca644d98918d9a99!2sSalon%20fryzjersko-%20kosmetyczny%20NK%20Metamorfoza!5e0!3m2!1spl!2spl!4v1678963448300!5m2!1spl!2spl" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div>
-
-            </div>
         </div>
     </main>
     <script src="index.js"></script>
