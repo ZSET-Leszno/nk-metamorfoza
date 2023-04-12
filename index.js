@@ -58,7 +58,10 @@ function expand(index) {
         document.getElementById("category" + index).style = "";
     } else {
         var list = document.getElementById("category" + index).children;
-        var height = list.length * list[0].offsetHeight;
+        var height = 0;
+        for (i = list.length - 1; i >= 0; i--) {
+            height += list[i].offsetHeight;
+        }
         document.getElementById("category" + index).style.maxHeight = height + "px";
         arrows[index - 1].style = "transform: rotate(-135deg); -webkit-transform: rotate(-135deg); margin-bottom: -20px";
     }

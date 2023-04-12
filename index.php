@@ -73,7 +73,7 @@
                                 echo '
                                     <div>
                                         <p>'.mb_convert_case($service["nazwa"], MB_CASE_TITLE, "UTF-8").'</p>
-                                        <span>'.($service["cena"] != "0" ? $service["cena"].' zł' : "Cena Do Ustalenia (Tel. 510-593-610)").'</span>
+                                        <span>'.($service["cena"] != "0" ? $service["cena"].'&nbsp;zł' : "Cena Do Ustalenia (Tel. 510-593-610)").'</span>
                                     </div>
                                 ';
                                 }

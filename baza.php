@@ -1,7 +1,7 @@
 <?php
 
-    $dbuser = "admin";
-    $dbpassword = "vDayBBFjieOx";
+    $dbuser = "root";
+    $dbpassword = "";
     $dbname = "nk_metamorfoza";
 
 ?>
