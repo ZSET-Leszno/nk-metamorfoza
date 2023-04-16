@@ -318,6 +318,8 @@ header h2 {
 #reviews {
     position: relative;
     margin: 40px 15%;
+    padding-top: 50px;
+    border-top: 2px solid grey;
 }
 
 .review {
