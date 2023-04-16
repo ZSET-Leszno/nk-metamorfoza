@@ -66,3 +66,34 @@ function expand(index) {
         arrows[index - 1].style = "transform: rotate(-135deg); -webkit-transform: rotate(-135deg); margin-bottom: -20px";
     }
 }
+
+function nextSlide() {
+    var list = document.getElementsByClassName('review');
+    var index = parseInt(document.getElementById("reviewId").innerHTML);
+    console.log(list.length);
+    if (list.length - 1 == index) {
+        document.getElementById("reviewId").innerHTML = 0;
+        list[list.length - 1].classList.remove("review-active");
+        list[0].classList.add("review-active");
+    } else {
+        document.getElementById("reviewId").innerHTML = index + 1;
+        list[index].classList.remove("review-active");
+        list[index + 1].classList.add("review-active");
+    }
+}
+
+function previousSlide() {
+    var list = document.getElementsByClassName('review');
+    var index = parseInt(document.getElementById("reviewId").innerHTML);
+    if (index == 0) {
+        document.getElementById("reviewId").innerHTML = list.length - 1;
+        list[0].classList.remove("review-active");
+        list[list.length - 1].classList.add("review-active");
+    } else {
+        document.getElementById("reviewId").innerHTML = index - 1;
+        list[index].classList.remove("review-active");
+        list[index - 1].classList.add("review-active");
+    }
+}
+
+document.getElementsByClassName('review')[0].classList.add("review-active");

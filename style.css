@@ -6,10 +6,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #f7efea;
-}
-
 nav {
     background-color: #FFFDFA;
     display: flex;
@@ -308,20 +304,72 @@ header h2 {
     -webkit-transition: 1s -webkit-transform;
 }
 
-#information {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    margin: 30px 0;
+#reviewHeader {
+    font-size: 1.9rem;
+    text-align: center;
+    margin: 20px 10px;
 }
 
-#map {
-    width: 100%;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    border-radius: 10px;
+#reviews {
+    position: relative;
+    margin: 40px 15%;
+}
+
+.review {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.review-active {
+    display: flex;
+}
+
+#reviews > span {
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#reviews > span div {
+    width: 20px;
+    height: 20px;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    margin-right: 10px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+#reviews > span:last-child {
+    right: 0;
+}
+
+#reviews > span:last-child div {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.review p {
+    margin-top: 10px;
+    padding: 0 20px;
+    max-width: 600px;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.review p span {
+    color: grey;
+}
+
+.review img {
+    width: 50px;
+    filter: invert(71%) sepia(91%) saturate(401%) hue-rotate(11deg) brightness(101%) contrast(113%);
+    -webkit-filter: invert(71%) sepia(91%) saturate(401%) hue-rotate(11deg) brightness(101%) contrast(113%);
 }
 
 @media screen and (max-width: 1000px) {
@@ -336,5 +384,15 @@ header h2 {
     }
     nav > div {
         display: none;
+    }
+    #reviews > span {
+        position: static;
+        padding: 15px;
+        width: min-content;
+        display: inline-block;
+        margin-top: 15px;
+    }
+    #reviews > span:last-child {
+        float: right;
     }
 }

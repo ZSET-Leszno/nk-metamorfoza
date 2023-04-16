@@ -25,31 +25,46 @@
         </div>
     </header>
     <main>
-        <div id="cards" class="wrap">
-            <div class="card pre-card card-top">
-                <img src="img/media/11.jpg" alt="obraz">
-            </div>
-            <div class="card pre-card card-top">
-                <img src="img/media/2.jpg" alt="obraz">
-            </div>
-            <div class="card pre-card card-top card-poof">
-                <img src="img/media/3.jpg" alt="obraz">
-            </div>
-            <div class="card pre-card card-top card-poof">
-                <img src="img/media/10.jpg" alt="obraz">
-            </div>
-            <div class="card pre-card card-bottom">
-                <img src="img/media/5.jpg" alt="obraz">
-            </div>
-            <div class="card pre-card card-left card-bottom">
-                <img src="img/media/6.jpg" alt="obraz">
-            </div>
-            <div class="card pre-card card-bottom card-poof">
-                <img src="img/media/7.jpg" alt="obraz">
-            </div>
-            <div class="card pre-card card-bottom card-poof">
-                <img src="img/media/12.jpg" alt="obraz">
-            </div>
+        <span id="reviewId" style="display: none;">0</span>
+        <h2 id="reviewHeader">Poznaj opinie naszych klientów</h2>
+        <div id="reviews">
+            <?php
+
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, "https://booksy.com/api/pl/2/customer_api/businesses/127849/reviews?reviews_per_page=1000");
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch , CURLOPT_HTTPHEADER, ['X-Api-Key: web-e3d812bf-d7a2-445d-ab38-55589ae6a121']);
+            $response = curl_exec($ch);
+            $json = json_decode($response, true);
+            foreach ($json["reviews"] as $review) {
+                $stars = $review["rank"];
+                if ($stars >= 4) {
+                    echo '
+                    <div class="review">
+                        <div>
+                    ';
+                    for ($i = 5; $i > 0; $i--) {
+                        if ($stars > 0) {
+                            echo '<img src="img/star-solid.svg" alt="gwiazdka">';
+                            $stars--;
+                        } else {
+                            echo '<img src="img/star-regular.svg" alt="gwiazdka">';
+                        }
+                    }
+                    echo '
+                        </div>
+                        <p>'.$review["review"].'<span> ~ '.$review["user"]["first_name"].' '.$review["user"]["last_name"].'</span></p>
+                    </div>
+                    ';
+                }
+            }
+
+            ?>
+            <span onclick="previousSlide()"><div></div></span>
+            <span onclick="nextSlide()"><div></div></span>
+        </div>
         </div>
         <div id="services">
             <div class="dark wrap">
@@ -91,11 +106,31 @@
                 </div>
             </div>
         </div>
-        <div class="wrap" id="information">
-            <p>
-                NK Metamorfoza to salon fryzjersko-kosmetyczny, oferujący szeroką gamę usług związanych z fryzjerstwem, manicure, pedicure, makijażem, zabiegami skóry i ciała, depilacją i wiele więcej. Salon stawia na profesjonalne produkty i obsługę.
-                Zachęcamy do skorzystania z naszych usług. Prowadzimy program rabatowy dla naszych klientów.
-            </p>
+        <div id="cards" class="wrap">
+            <div class="card pre-card card-top">
+                <img src="img/media/11.jpg" alt="obraz">
+            </div>
+            <div class="card pre-card card-top">
+                <img src="img/media/2.jpg" alt="obraz">
+            </div>
+            <div class="card pre-card card-top card-poof">
+                <img src="img/media/3.jpg" alt="obraz">
+            </div>
+            <div class="card pre-card card-top card-poof">
+                <img src="img/media/10.jpg" alt="obraz">
+            </div>
+            <div class="card pre-card card-bottom">
+                <img src="img/media/5.jpg" alt="obraz">
+            </div>
+            <div class="card pre-card card-left card-bottom">
+                <img src="img/media/6.jpg" alt="obraz">
+            </div>
+            <div class="card pre-card card-bottom card-poof">
+                <img src="img/media/7.jpg" alt="obraz">
+            </div>
+            <div class="card pre-card card-bottom card-poof">
+                <img src="img/media/12.jpg" alt="obraz">
+            </div>
         </div>
     </main>
     <script src="index.js"></script>
