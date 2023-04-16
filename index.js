@@ -1,10 +1,10 @@
 addEventListener("scroll", (event) => {
     const rect = document.getElementById('cards').getBoundingClientRect();
-    if (rect.top < 650) {
+    if (rect.top < 450) {
         cards();
     }
     const rect2 = document.getElementById('services').getBoundingClientRect();
-    if (rect2.top < 650) {
+    if (rect2.top < 650 && document.getElementById('search').value == '') {
         slideIn('slide');
     }
     if (rect2.top < 650 && document.getElementById('services-text').innerHTML == "") {
@@ -21,6 +21,30 @@ addEventListener("DOMContentLoaded", async (event) => {
     await sleep(17 * parseInt(druginapis.length));
     fadeIn("arrow");
 })
+
+addEventListener("input", (event) => {
+    var input = document.getElementById('search').value;
+    if (input == "") {
+        document.getElementById('services-inner').style = 'transform: translate(0); -webkit-transform: translate(0);';
+        document.getElementById('searched').innerHTML = '';
+    } else {
+        document.getElementById('services-inner').style = 'display: none;';
+        var search = new XMLHttpRequest();
+        search.onloadstart = function() {
+    document.getElementById('searched').innerHTML = '<div style="height: 287px; display: flex; justify-content: center; align-items: center;"><img width="50" src="img/loading-gif.gif"></div>';
+        }
+        search.onload = function() {
+            if (search.responseText == '') {
+                document.getElementById('searched').innerHTML = '<div style="justify-content: center;">Brak wyników</div>';
+            } else {
+                document.getElementById('searched').innerHTML = search.responseText;
+            }
+        }
+        search.open("POST", "search.php");
+        search.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        search.send("search=" + input);
+    }
+});
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -70,7 +94,6 @@ function expand(index) {
 function nextSlide() {
     var list = document.getElementsByClassName('review');
     var index = parseInt(document.getElementById("reviewId").innerHTML);
-    console.log(list.length);
     if (list.length - 1 == index) {
         document.getElementById("reviewId").innerHTML = 0;
         list[list.length - 1].classList.remove("review-active");
@@ -97,3 +120,4 @@ function previousSlide() {
 }
 
 document.getElementsByClassName('review')[0].classList.add("review-active");
+

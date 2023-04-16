@@ -12,7 +12,7 @@
         <span><img src="img/logoblack.svg" alt="logo"></span>
         <div>
             <a href="#">Usługi</a>
-            <a href="#">Rezerwacja</a>
+            <a href="https://booksy.com/pl-pl/127849_nk-metamorfoza_fryzjer_17369_leszno">Rezerwacja</a>
             <a href="#">Kontakt</a>
         </div>
         <div></div>
@@ -21,12 +21,15 @@
         <div class="dark">          
             <h1 id="header"></h1>
             <h2 id="header2"></h2>
-            <div id="arrow" onclick="document.getElementById('cards').scrollIntoView({behavior: 'smooth'})"></div>
+            <div id="arrow" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})"></div>
         </div>
     </header>
     <main>
         <span id="reviewId" style="display: none;">0</span>
-        <h2 id="reviewHeader">Poznaj opinie naszych klientów</h2>
+        <h2 id="reviewHeader">Poznaj nas bliżej</h2>
+        <div class="wrap" id="about">
+            <p><b>NK Metamorfoza</b> to salon fryzjersko-kosmetyczny, oferujący szeroką gamę usług związanych z fryzjerstwem, manicure, pedicure, makijażem, zabiegami skóry i ciała, depilacją i wiele więcej. Salon stawia na profesjonalne produkty i obsługę. Zachęcamy do skorzystania z naszych usług. Prowadzimy program rabatowy dla naszych klientów.</p>
+        </div>
         <div id="reviews">
             <?php
 
@@ -65,10 +68,12 @@
             <span onclick="previousSlide()"><div></div></span>
             <span onclick="nextSlide()"><div></div></span>
         </div>
-        </div>
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5862.763050923558!2d16.561946293618032!3d51.8429109343784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47059826f143ec83%3A0xca644d98918d9a99!2sSalon%20fryzjersko-%20kosmetyczny%20NK%20Metamorfoza!5e0!3m2!1spl!2spl!4v1681662211567!5m2!1spl!2spl" width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div id="services">
             <div class="dark wrap">
                 <h2 id="services-text"></h2>
+                <input type="text" id="search" placeholder="Wyszukaj konkretną usługę">
+                <div id="searched"></div>
                 <div id="services-inner" class="slide">
                     <?php
                         try {
@@ -107,28 +112,28 @@
             </div>
         </div>
         <div id="cards" class="wrap">
-            <div class="card pre-card card-top">
+            <div class="card pre-card">
                 <img src="img/media/11.jpg" alt="obraz">
             </div>
-            <div class="card pre-card card-top">
+            <div class="card pre-card">
                 <img src="img/media/2.jpg" alt="obraz">
             </div>
-            <div class="card pre-card card-top card-poof">
+            <div class="card pre-card">
                 <img src="img/media/3.jpg" alt="obraz">
             </div>
-            <div class="card pre-card card-top card-poof">
+            <div class="card pre-card">
                 <img src="img/media/10.jpg" alt="obraz">
             </div>
-            <div class="card pre-card card-bottom">
+            <div class="card pre-card">
                 <img src="img/media/5.jpg" alt="obraz">
             </div>
-            <div class="card pre-card card-left card-bottom">
+            <div class="card pre-card">
                 <img src="img/media/6.jpg" alt="obraz">
             </div>
-            <div class="card pre-card card-bottom card-poof">
+            <div class="card pre-card">
                 <img src="img/media/7.jpg" alt="obraz">
             </div>
-            <div class="card pre-card card-bottom card-poof">
+            <div class="card pre-card">
                 <img src="img/media/12.jpg" alt="obraz">
             </div>
         </div>
