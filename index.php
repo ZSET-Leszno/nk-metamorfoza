@@ -119,7 +119,7 @@
                 <img src="img/media/2.jpg" alt="obraz">
             </div>
             <div class="card pre-card">
-                <img src="img/media/3.jpg" alt="obraz">
+                <img src="img/media/4.jpg" alt="obraz">
             </div>
             <div class="card pre-card">
                 <img src="img/media/10.jpg" alt="obraz">
