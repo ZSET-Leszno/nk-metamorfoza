@@ -128,10 +128,10 @@
                 <img src="img/media/5.jpg" alt="obraz">
             </div>
             <div class="card pre-card">
-                <img src="img/media/6.jpg" alt="obraz">
+                <img src="img/media/9.jpg" alt="obraz">
             </div>
             <div class="card pre-card">
-                <img src="img/media/7.jpg" alt="obraz">
+                <img src="img/media/1.jpg" alt="obraz">
             </div>
             <div class="card pre-card">
                 <img src="img/media/12.jpg" alt="obraz">
