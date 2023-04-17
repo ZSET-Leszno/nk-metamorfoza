@@ -84,6 +84,7 @@ header > div {
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
     padding: 0 10%;
+    text-shadow: 2px 2px black;
 }
 
 header h1 {
@@ -139,6 +140,7 @@ header h2 {
     column-gap: 10px;
     row-gap: 10px;
     padding-top: 40px;
+    padding-bottom: 50px;
     color: white;
     overflow: hidden;
 }

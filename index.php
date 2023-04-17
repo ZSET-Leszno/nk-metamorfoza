@@ -29,7 +29,7 @@
     </header>
     <main>
         <span id="reviewId" style="display: none;">0</span>
-        <h2 id="reviewHeader">Poznaj nas bliżej</h2>
+        <h2 id="reviewHeader">Poznaj nas bliżej!</h2>
         <div class="wrap" id="about">
             <p><b>NK Metamorfoza</b> to salon fryzjersko-kosmetyczny, oferujący szeroką gamę usług związanych z fryzjerstwem, manicure, pedicure, makijażem, zabiegami skóry i ciała, depilacją i wiele więcej. Salon stawia na profesjonalne produkty i obsługę. Zachęcamy do skorzystania z naszych usług. Prowadzimy program rabatowy dla naszych klientów.</p>
         </div>
@@ -148,23 +148,23 @@
                 </div>
             </div>
             <div>
-                <a href="https://www.facebook.com/METAMORFOZAnk"><img src="img/facebook.svg" alt="facebook"></a>
-                <a href="https://booksy.com/pl-pl/127849_nk-metamorfoza_fryzjer_17369_leszno"><img src="img/booksy.svg" alt="booksy"></a>
-                <a href="#"><img src="img/instagram.svg" alt="instagram"></a>
+                <a href="https://www.facebook.com/METAMORFOZAnk"><img src="img/facebook.svg" alt="facebook-icon"></a>
+                <a href="https://booksy.com/pl-pl/127849_nk-metamorfoza_fryzjer_17369_leszno"><img src="img/booksy.svg" alt="booksy-icon"></a>
+                <a href="https://www.instagram.com/nk_metamorfoza/"><img src="img/instagram.svg" alt="instagram-icon"></a>
             </div>
             <div>
                 <div>
-                    <h4>Skontaktuj się z nami</h4>
+                    <h4>Skontaktuj się z nami:</h4>
                     <div>
                         <p><img src="img/phone.svg" alt="telefon">+48 510 593 610</p>
-                        <p><img src="img/phone.svg" alt="telefon">email@gmail.com</p>
+                        <p><img src="img/at.svg" alt="telefon">potrzebne@informacje.com</p>
                         <p><img src="img/location.svg" alt="telefon">Święciechowska 1A,<br>64-100 Leszno</p>
                     </div>
                 </div>
             </div>
         </footer>
         <div id="copyright">
-            <span>NK Metamorfoza &copy; Wszelkie prawa zastrzeżone | NIP: 022-41-11-111</span>
+            <span>NK Metamorfoza &copy; Wszelkie prawa zastrzeżone | NIP: 6972387521</span>
         </div>
     </main>
     <script src="index.js"></script>
