@@ -1,6 +1,7 @@
-addEventListener("scroll", (event) => {
+['scroll', 'DOMContentLoaded'].forEach(function(e) {
+    addEventListener(e, (event) => {
     const rect = document.getElementById('cards').getBoundingClientRect();
-    if (rect.top < 450) {
+    if (rect.top < 750) {
         cards();
     }
     const rect2 = document.getElementById('services').getBoundingClientRect();
@@ -8,9 +9,16 @@ addEventListener("scroll", (event) => {
         slideIn('slide');
     }
     if (rect2.top < 650 && document.getElementById('services-text').innerHTML == "") {
-        writing("services-text", "Zapoznaj się z naszymi usługami:", 25);
+        writing("services-text", "Zapoznaj się z naszymi usługami", 25);
     }
-});
+    const rect3 = document.getElementById('reviewHeader').getBoundingClientRect();
+    if (rect3.top < 650) {
+        fadeIn('reviewHeader');
+        fadeIn('about');
+        fadeIn('reviews');
+        fadeIn('map');
+    }
+});});
 
 addEventListener("DOMContentLoaded", async (event) => {
     var pierwszynapis = "NK Metamorfoza";
@@ -65,7 +73,7 @@ async function writing(id, napis, wait) {
 }
 
 function fadeIn(id) {
-    document.getElementById(id).style = "opacity: 1; transition: 0.75s opacity ;-webkit-transition: 0.75s;";
+    document.getElementById(id).style = "opacity: 1; transition: 0.75s opacity ;-webkit-transition: 0.75s opacity;";
 }
 
 function slideIn(klasa) {
