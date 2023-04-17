@@ -48,47 +48,49 @@
         <span class="anchor">
             <div id="aboutAnchor"></div>
         </span>
-        <h2 id="reviewHeader">NK Metamorfoza</h2>
+        <h2 id="reviewHeader">Poznaj nas bliżej</h2>
         <div class="wrap" id="about">
             <p><b>NK Metamorfoza</b> to salon fryzjersko-kosmetyczny, oferujący szeroką gamę usług związanych z fryzjerstwem, manicure, pedicure, makijażem, zabiegami skóry i ciała, depilacją i wiele więcej. Salon stawia na profesjonalne produkty i obsługę. Zachęcamy do skorzystania z naszych usług. Prowadzimy program rabatowy dla naszych klientów.</p>
         </div>
-        <div id="reviews">
-            <?php
-
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://booksy.com/api/pl/2/customer_api/businesses/127849/reviews?reviews_per_page=1000");
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch , CURLOPT_HTTPHEADER, ['X-Api-Key: web-e3d812bf-d7a2-445d-ab38-55589ae6a121']);
-            $response = curl_exec($ch);
-            $json = json_decode($response, true);
-            foreach ($json["reviews"] as $review) {
-                $stars = $review["rank"];
-                if ($stars >= 4) {
-                    echo '
-                    <div class="review">
-                        <div>
-                    ';
-                    for ($i = 5; $i > 0; $i--) {
-                        if ($stars > 0) {
-                            echo '<img src="img/star-solid.svg" alt="gwiazdka">';
-                            $stars--;
-                        } else {
-                            echo '<img src="img/star-regular.svg" alt="gwiazdka">';
+        <div id="reviewBackground">
+            <div id="reviews">
+                <?php
+    
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_URL, "https://booksy.com/api/pl/2/customer_api/businesses/127849/reviews?reviews_per_page=1000");
+                curl_setopt($ch, CURLOPT_POST, 1);
+                curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch , CURLOPT_HTTPHEADER, ['X-Api-Key: web-e3d812bf-d7a2-445d-ab38-55589ae6a121']);
+                $response = curl_exec($ch);
+                $json = json_decode($response, true);
+                foreach ($json["reviews"] as $review) {
+                    $stars = $review["rank"];
+                    if ($stars >= 4) {
+                        echo '
+                        <div class="review">
+                            <div>
+                        ';
+                        for ($i = 5; $i > 0; $i--) {
+                            if ($stars > 0) {
+                                echo '<img src="img/star-solid.svg" alt="gwiazdka">';
+                                $stars--;
+                            } else {
+                                echo '<img src="img/star-regular.svg" alt="gwiazdka">';
+                            }
                         }
-                    }
-                    echo '
+                        echo '
+                            </div>
+                            <p>'.$review["review"].'<span> ~ '.$review["user"]["first_name"].' '.$review["user"]["last_name"].'</span></p>
                         </div>
-                        <p>'.$review["review"].'<span> ~ '.$review["user"]["first_name"].' '.$review["user"]["last_name"].'</span></p>
-                    </div>
-                    ';
+                        ';
+                    }
                 }
-            }
-
-            ?>
-            <span onclick="previousSlide()"><div></div></span>
-            <span onclick="nextSlide()"><div></div></span>
+    
+                ?>
+                <span onclick="previousSlide()"><div></div></span>
+                <span onclick="nextSlide()"><div></div></span>
+            </div>
         </div>
         <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5862.763050923558!2d16.561946293618032!3d51.8429109343784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47059826f143ec83%3A0xca644d98918d9a99!2sSalon%20fryzjersko-%20kosmetyczny%20NK%20Metamorfoza!5e0!3m2!1spl!2spl!4v1681662211567!5m2!1spl!2spl" width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <span class="anchor">
