@@ -599,6 +599,12 @@ footer > div:last-child img {
     }
 }
 
+@media screen and (min-width: 1031px) {
+    #burger {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .wrap {
         padding: 0 3%;
