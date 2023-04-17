@@ -43,9 +43,9 @@ addEventListener("input", (event) => {
         }
         search.onload = function() {
             if (search.responseText == '') {
-                document.getElementById('searched').innerHTML = '<div style="justify-content: center;">Brak wyników</div><span style="text-align: center; display: block;"><a onclick="hide();">Wyczyść wyszukiwanie</a></span>';
+                document.getElementById('searched').innerHTML = '<div style="justify-content: center;">Brak wyników</div><span style="text-align: center; display: block;"><a style="color: rgb(48, 48, 48);" onclick="hide();">Wyczyść wyszukiwanie</a></span>';
             } else {
-                document.getElementById('searched').innerHTML = search.responseText + '<span style="text-align: center; display: block;"><a onclick="hide();">Wyczyść wyszukiwanie</a></span>';
+                document.getElementById('searched').innerHTML = search.responseText + '<span style="text-align: center; display: block;"><a style="color: rgb(48, 48, 48);" onclick="hide();">Wyczyść wyszukiwanie</a></span>';
             }
         }
         search.open("POST", "search.php");
