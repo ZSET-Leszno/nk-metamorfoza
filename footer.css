@@ -1,29 +1,26 @@
-#footer-left{
-
-}
-#footer-left img{
-
-}
-#footer-center img{
-    height: 100px;
-    -webkit-user-drag: none;
-}
-#footer-right{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-footer img{
-    height: 45px;
-    -webkit-user-drag: none;
-}
 footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-top: 2px solid grey;
     margin: 40px 15%;
-    padding-top: 50px;
+    padding-top: 30px;
+}
+#footer-left img{
+    height: 50px;
+}
+#footer-center img{
+    height: 110px;
+    -webkit-user-drag: none;
+}
+#footer-right{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#footer-right img{
+    height: 30px;
 }
 #copyrights{
     text-align: center;

@@ -13,10 +13,10 @@
     <nav>
         <span><img src="img/logoblack.svg" alt="logo"></span>
         <div>
-            <a href="#">Usługi</a>
+            <a href="#services">Usługi</a>
             <a href="https://booksy.com/pl-pl/127849_nk-metamorfoza_fryzjer_17369_leszno">Rezerwacja</a>
-            <a href="#">Lokalizacja</a>
-            <a href="#">Galeria</a>
+            <a href="#map">Lokalizacja</a>
+            <a href="#cards">Galeria</a>
         </div>
         <div></div>
     </nav>
@@ -150,8 +150,8 @@
                 <img src="img/logoblack.svg" alt="logo">
             </div>
             <div id="footer-right">
-                <span><img src="img/phone.svg" alt="phone-icon"></span>
-                <span><img src="img/location.svg" alt="location-icon"></span>
+                <img src="img/phone.svg" alt="phone-icon">510-593-610
+                <img src="img/location.svg" alt="location-icon">Święciechowska 1A, 64-100 Leszno
             </div>                  
         </footer>
         <div id="copyrights">
