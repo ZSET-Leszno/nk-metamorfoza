@@ -55,36 +55,36 @@
         <div id="reviews">
             <?php
 
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://booksy.com/api/pl/2/customer_api/businesses/127849/reviews?reviews_per_page=1000");
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch , CURLOPT_HTTPHEADER, ['X-Api-Key: web-e3d812bf-d7a2-445d-ab38-55589ae6a121']);
-            $response = curl_exec($ch);
-            $json = json_decode($response, true);
-            foreach ($json["reviews"] as $review) {
-                $stars = $review["rank"];
-                if ($stars >= 4) {
-                    echo '
-                    <div class="review">
-                        <div>
-                    ';
-                    for ($i = 5; $i > 0; $i--) {
-                        if ($stars > 0) {
-                            echo '<img src="img/star-solid.svg" alt="gwiazdka">';
-                            $stars--;
-                        } else {
-                            echo '<img src="img/star-regular.svg" alt="gwiazdka">';
-                        }
-                    }
-                    echo '
-                        </div>
-                        <p>'.$review["review"].'<span> ~ '.$review["user"]["first_name"].' '.$review["user"]["last_name"].'</span></p>
-                    </div>
-                    ';
-                }
-            }
+            // $ch = curl_init();
+            // curl_setopt($ch, CURLOPT_URL, "https://booksy.com/api/pl/2/customer_api/businesses/127849/reviews?reviews_per_page=1000");
+            // curl_setopt($ch, CURLOPT_POST, 1);
+            // curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+            // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            // curl_setopt($ch , CURLOPT_HTTPHEADER, ['X-Api-Key: web-e3d812bf-d7a2-445d-ab38-55589ae6a121']);
+            // $response = curl_exec($ch);
+            // $json = json_decode($response, true);
+            // foreach ($json["reviews"] as $review) {
+            //     $stars = $review["rank"];
+            //     if ($stars >= 4) {
+            //         echo '
+            //         <div class="review">
+            //             <div>
+            //         ';
+            //         for ($i = 5; $i > 0; $i--) {
+            //             if ($stars > 0) {
+            //                 echo '<img src="img/star-solid.svg" alt="gwiazdka">';
+            //                 $stars--;
+            //             } else {
+            //                 echo '<img src="img/star-regular.svg" alt="gwiazdka">';
+            //             }
+            //         }
+            //         echo '
+            //             </div>
+            //             <p>'.$review["review"].'<span> ~ '.$review["user"]["first_name"].' '.$review["user"]["last_name"].'</span></p>
+            //         </div>
+            //         ';
+            //     }
+            // }
 
             ?>
             <span onclick="previousSlide()"><div></div></span>
@@ -185,6 +185,30 @@
                         <p><img src="img/at.svg" alt="telefon">potrzebne@informacje.com</p>
                         <p><img src="img/location.svg" alt="telefon">Święciechowska 1A,<br>64-100 Leszno</p>
                     </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h4>Godziny otwaricia:</h4>
+                    <?php
+
+                        try {
+                            $connection = new mysqli("localhost", $dbuser, $dbpassword, $dbname);
+                            $query = $connection->query("SELECT * FROM otwarcia");
+                            while($hours = $query->fetch_assoc()) {
+                                echo '
+                                    <p>
+                                        <span>'.mb_convert_case($hours["dzien"], MB_CASE_TITLE, "UTF-8").'</span>
+                                        <span>'.($hours["zamkniete"] != "1" ? ($hours["otwarcie"].' - '.$hours["zamkniecie"]) : "Nieczynne").'</span>
+                                    </p>
+                                ';
+                            }
+                            $connection->close();
+                        } catch (Exception $e) {
+                            echo $e->getMessage();
+                        }
+
+                    ?>
                 </div>
             </div>
         </footer>
