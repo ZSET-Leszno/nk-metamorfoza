@@ -131,7 +131,7 @@
 
                     ?>
                     <div style="text-align: center;">
-                        <a href="https://booksy.com/pl-pl/127849_nk-metamorfoza_fryzjer_17369_leszno" target="_blank">Zarezerwuj wizytę teraz</a>
+                        <a style="color: rgb(48, 48, 48);" href="https://booksy.com/pl-pl/127849_nk-metamorfoza_fryzjer_17369_leszno" target="_blank">Zarezerwuj wizytę teraz!</a>
                     </div>
                 </div>
             </div>
