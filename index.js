@@ -35,9 +35,9 @@ addEventListener("input", (event) => {
         }
         search.onload = function() {
             if (search.responseText == '') {
-                document.getElementById('searched').innerHTML = '<div style="justify-content: center;">Brak wyników</div>';
+                document.getElementById('searched').innerHTML = '<div style="justify-content: center;">Brak wyników</div><span style="text-align: center; display: block;"><a onclick="hide();">Wyczyść wyszukiwanie</a></span>';
             } else {
-                document.getElementById('searched').innerHTML = search.responseText;
+                document.getElementById('searched').innerHTML = search.responseText + '<span style="text-align: center; display: block;"><a onclick="hide();">Wyczyść wyszukiwanie</a></span>';
             }
         }
         search.open("POST", "search.php");
@@ -121,3 +121,8 @@ function previousSlide() {
 
 document.getElementsByClassName('review')[0].classList.add("review-active");
 
+function hide() {
+    document.getElementById('search').value = '';
+    document.getElementById('services-inner').style = 'transform: translate(0); -webkit-transform: translate(0);';
+    document.getElementById('searched').innerHTML = '';
+}

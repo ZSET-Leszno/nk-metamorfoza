@@ -298,6 +298,7 @@ header h2 {
     font-weight: bold;
     transition: 0.2s transform;
     -webkit-transition: 0.2s transform;
+    cursor: pointer;
 }
 
 #services a:hover {
@@ -410,8 +411,12 @@ header h2 {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-#searched span {
+#searched div span {
     margin-left: auto;
+    display: inline-block;
+}
+
+#searched a {
     display: inline-block;
 }
 

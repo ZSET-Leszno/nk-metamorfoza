@@ -72,7 +72,7 @@
         <div id="services">
             <div class="dark wrap">
                 <h2 id="services-text"></h2>
-                <input type="text" id="search" placeholder="Wyszukaj konkretną usługę">
+                <input type="text" id="search" name="service" placeholder="Wyszukaj konkretną usługę">
                 <div id="searched"></div>
                 <div id="services-inner" class="slide">
                     <?php
