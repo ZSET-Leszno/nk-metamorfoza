@@ -1,0 +1,33 @@
+#footer-left{
+
+}
+#footer-left img{
+
+}
+#footer-center img{
+    height: 100px;
+    -webkit-user-drag: none;
+}
+#footer-right{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+footer img{
+    height: 45px;
+    -webkit-user-drag: none;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid grey;
+    margin: 40px 15%;
+    padding-top: 50px;
+}
+#copyrights{
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    padding: 4px;
+}

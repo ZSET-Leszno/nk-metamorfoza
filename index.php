@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="icon" type="image/svg" href="img/logowhite.svg">
     <title>NK Metamorfoza</title>
 </head>
@@ -14,7 +15,8 @@
         <div>
             <a href="#">Usługi</a>
             <a href="https://booksy.com/pl-pl/127849_nk-metamorfoza_fryzjer_17369_leszno">Rezerwacja</a>
-            <a href="#">Kontakt</a>
+            <a href="#">Lokalizacja</a>
+            <a href="#">Galeria</a>
         </div>
         <div></div>
     </nav>
@@ -138,8 +140,24 @@
                 <img src="img/media/12.jpg" alt="obraz">
             </div>
         </div>
+         
+        <footer>
+            <div id="footer-left">
+                <span><a href="https://www.facebook.com/METAMORFOZAnk/?locale=pl_PL"><img src="img/facebook.svg" alt="facebook-icon"></a></span>
+                <span><a href="https://www.instagram.com/nk_metamorfoza/?locale=pl_PL"><img src="img/instagram.svg" alt="instagram-icon"></a></span>
+            </div>
+            <div id="footer-center">
+                <img src="img/logoblack.svg" alt="logo">
+            </div>
+            <div id="footer-right">
+                <span><img src="img/phone.svg" alt="phone-icon"></span>
+                <span><img src="img/location.svg" alt="location-icon"></span>
+            </div>                  
+        </footer>
+        <div id="copyrights">
+            <p>&copy; 2023 Wszelkie prawa zastrzeżone
+        </div>  
     </main>
     <script src="index.js"></script>
-
 </body>
 </html>
