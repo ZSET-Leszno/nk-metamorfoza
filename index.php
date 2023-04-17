@@ -140,23 +140,32 @@
                 <img src="img/media/12.jpg" alt="obraz">
             </div>
         </div>
-         
         <footer>
-            <div id="footer-left">
-                <span><a href="https://www.facebook.com/METAMORFOZAnk/?locale=pl_PL"><img src="img/facebook.svg" alt="facebook-icon"></a></span>
-                <span><a href="https://www.instagram.com/nk_metamorfoza/?locale=pl_PL"><img src="img/instagram.svg" alt="instagram-icon"></a></span>
+            <div>
+                <div>
+                    <img src="img/logowhite.svg" alt="logo">
+                    <h3>Profesjonalizm blisko Ciebie</h3>
+                </div>
             </div>
-            <div id="footer-center">
-                <img src="img/logoblack.svg" alt="logo">
+            <div>
+                <a href="https://www.facebook.com/METAMORFOZAnk"><img src="img/facebook.svg" alt="facebook"></a>
+                <a href="https://booksy.com/pl-pl/127849_nk-metamorfoza_fryzjer_17369_leszno"><img src="img/booksy.svg" alt="booksy"></a>
+                <a href="#"><img src="img/instagram.svg" alt="instagram"></a>
             </div>
-            <div id="footer-right">
-                <img src="img/phone.svg" alt="phone-icon">510-593-610
-                <img src="img/location.svg" alt="location-icon">Święciechowska 1A, 64-100 Leszno
-            </div>                  
+            <div>
+                <div>
+                    <h4>Skontaktuj się z nami</h4>
+                    <div>
+                        <p><img src="img/phone.svg" alt="telefon">+48 510 593 610</p>
+                        <p><img src="img/phone.svg" alt="telefon">email@gmail.com</p>
+                        <p><img src="img/location.svg" alt="telefon">Święciechowska 1A,<br>64-100 Leszno</p>
+                    </div>
+                </div>
+            </div>
         </footer>
-        <div id="copyrights">
-            <p>&copy; 2023 Wszelkie prawa zastrzeżone
-        </div>  
+        <div id="copyright">
+            <span>NK Metamorfoza &copy; Wszelkie prawa zastrzeżone | NIP: 022-41-11-111</span>
+        </div>
     </main>
     <script src="index.js"></script>
 </body>

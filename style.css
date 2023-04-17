@@ -419,15 +419,103 @@ header h2 {
     display: inline-block;
 }
 
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 100px;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    padding: 30px 15%;
+}
+
+footer img {
+    width: 100px;
+}
+
+footer > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+footer > div:first-child > div {
+    text-align: center;
+    width: fit-content;
+}
+
+footer > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer > div:nth-child(2) img {
+    text-align: center;
+    width: fit-content;
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(84deg) brightness(107%) contrast(101%);
+    -webkit-filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(84deg) brightness(107%) contrast(101%);
+    width: 60px;
+    padding: 0 5px;
+    transition: 0.25s transform;
+    -webkit-transform: 0.25s transform;
+}
+footer > div:nth-child(2) img:hover {
+    transform: scale(0.96);
+}
+
+footer > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+footer > div:last-child  > div {
+    text-align: right;
+}
+
+footer > div:last-child  > div h4 {
+    margin-bottom: 8px;
+}
+
+footer > div:last-child  > div > div {
+    text-align: left;
+    margin-left: auto;
+    width: fit-content;
+}
+
+footer > div:last-child p {
+    position: relative;
+    margin-bottom: 4px;
+}
+
+footer > div:last-child img {
+    width: 16px;
+    position: absolute;
+    left: -25px;
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(84deg) brightness(107%) contrast(101%);
+    -webkit-filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(84deg) brightness(107%) contrast(101%);
+}
+
+#copyright {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
 @media screen and (max-width: 1000px) {
-    .wrap {
-        padding: 0 3%;
-    }
     #cards {
         grid-template-columns: repeat(2, 1fr);
     }
     nav > div {
         display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .wrap {
+        padding: 0 3%;
     }
 }
 
@@ -442,5 +530,80 @@ header h2 {
     }
     #reviews > span:last-child {
         float: right;
+    }
+}
+
+@media screen and (max-width: 1030px) and (min-width: 731px) {
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+    footer > div:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer > div:first-child > div {
+        text-align: center;
+        width: fit-content;
+    }
+
+    footer > div:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    footer > div:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    
+    footer > div:last-child  > div {
+        text-align: center;
+    }
+
+    footer > div:last-child  > div > div {
+        margin-right: auto;
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    footer {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px;
+    }
+    footer > div:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer > div:first-child > div {
+        text-align: center;
+        width: fit-content;
+    }
+
+    footer > div:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    footer > div:last-child  > div {
+        text-align: center;
+    }
+
+    footer > div:last-child  > div > div {
+        margin-right: auto;
+        width: fit-content;
     }
 }
