@@ -118,7 +118,7 @@
                                 echo '
                                     <div>
                                         <p>'.mb_convert_case($service["nazwa"], MB_CASE_TITLE, "UTF-8").'</p>
-                                        <span>'.($service["cena"] != "0" ? $service["cena"].'&nbsp;zł' : "Cena Do Ustalenia (Tel. 510-593-610)").'</span>
+                                        <span>'.($service["cena"] != "0" ? $service["cena"].'&nbsp;zł' : "Cena Do Ustalenia (Tel. 502 947 181)").'</span>
                                     </div>
                                 ';
                                 }
@@ -181,7 +181,7 @@
                 <div>
                     <div>
                         <h4>Skontaktuj się z nami:</h4>
-                        <p><img src="img/phone.svg" alt="telefon">+48 510 593 610</p>
+                        <p><img src="img/phone.svg" alt="telefon">+48 502 947 181</p>
                         <p><img src="img/at.svg" alt="telefon">potrzebne@informacje.com</p>
                         <p><img src="img/location.svg" alt="telefon">Święciechowska 1A,<br>64-100 Leszno</p>
                     </div>
@@ -189,7 +189,7 @@
             </div>
             <div>
                 <div>
-                    <h4>Godziny otwaricia:</h4>
+                    <h4>Godziny otwarcia:</h4>
                     <?php
 
                         try {
