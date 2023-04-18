@@ -122,7 +122,7 @@ nav div a:hover::after {
 #navsideInfo {
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 100px;
     margin-left: 40px;
     white-space: nowrap;
 }
@@ -372,15 +372,15 @@ header h2 {
     transition: 0.2s box-shadow;
     -webkit-transition: 0.2s box-shadow;
     cursor: pointer;
-    -webkit-box-shadow: 0px 0px 24px 1px rgb(6, 6, 6);
-    -moz-box-shadow: 0px 0px 24px 1px rgb(6, 6, 6);
-    box-shadow: 0px 0px 24px 1px rgb(6, 6, 6);
-}
-
-#services a:hover {
     -webkit-box-shadow: 0px 0px 24px 1px rgb(27, 27, 27);
     -moz-box-shadow: 0px 0px 24px 1px rgba(27, 27, 27, 1);
     box-shadow: 0px 0px 24px 1px rgba(27, 27, 27, 1);
+}
+
+#services a:hover {
+    -webkit-box-shadow: 0px 0px 24px 1px rgb(6, 6, 6);
+    -moz-box-shadow: 0px 0px 24px 1px rgb(6, 6, 6);
+    box-shadow: 0px 0px 24px 1px rgb(6, 6, 6);
 }
 
 .slide, .slide2 {
@@ -564,6 +564,10 @@ footer > div:nth-child(3)  > div {
 
 footer h4 {
     margin-bottom: 8px;
+}
+
+footer > div:last-child h4{
+    text-align: center;
 }
 
 footer > div:nth-child(3)  > div > div {

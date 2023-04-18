@@ -14,7 +14,7 @@
         <div id="menu">
             <a onclick="document.getElementById('aboutAnchor').scrollIntoView({behavior: 'smooth'})">O nas</a>
             <a onclick="document.getElementById('serviceAnchor').scrollIntoView({behavior: 'smooth'})">Usługi</a>
-            <a href="https://booksy.com/pl-pl/127849_nk-metamorfoza_fryzjer_17369_leszno" target="_blank">Rezerwacja</a>
+            <a style="color: rgb(0, 130, 138);" href="https://booksy.com/pl-pl/127849_nk-metamorfoza_fryzjer_17369_leszno" target="_blank">Rezerwacja</a>
             <a onclick="document.getElementById('cardsAnchor').scrollIntoView({behavior: 'smooth'})">Galeria</a>
         </div>
         <div>

@@ -9,7 +9,7 @@
         slideIn('slide');
     }
     if (rect2.top < 650 && document.getElementById('services-text').innerHTML == "") {
-        writing("services-text", "Zapoznaj się z naszymi usługami", 25);
+        writing("services-text", "Zapoznaj się z naszymi usługami:", 25);
     }
     const rect3 = document.getElementById('reviewHeader').getBoundingClientRect();
     if (rect3.top < 650) {
@@ -39,7 +39,7 @@ addEventListener("input", (event) => {
         document.getElementById('services-inner').style = 'display: none;';
         var search = new XMLHttpRequest();
         search.onloadstart = function() {
-    document.getElementById('searched').innerHTML = '<div style="height: 287px; display: flex; justify-content: center; align-items: center;"><img width="50" src="img/loading-gif.gif"></div>';
+        document.getElementById('searched').innerHTML = '<div style="height: 287px; display: flex; justify-content: center; align-items: center;"><img width="50" src="img/loading-gif.gif"></div>';
         }
         search.onload = function() {
             if (search.responseText == '') {
