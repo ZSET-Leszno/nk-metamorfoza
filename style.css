@@ -243,6 +243,7 @@ header h2 {
     -moz-box-shadow: 4px 4px 16px 0px rgba(66, 68, 90, 1);
     box-shadow: 4px 4px 16px 0px rgba(66, 68, 90, 1);
     z-index: 2;
+    cursor: pointer;
 }
 
 .card:hover {
@@ -634,8 +635,8 @@ footer > div:last-child  > div p span:first-child {
 
 #modal-inner {
     background-color: white;
-    width: 90%;
-    height: 90vh;
+    width: 70%;
+    height: 80vh;
     border-radius: 15px;
     position: relative;
     display: flex;
@@ -652,10 +653,12 @@ footer > div:last-child  > div p span:first-child {
 
 #cross {
     position: absolute;
-    top: 15px;
+    top: 12px;
     right: 0;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(84deg) brightness(107%) contrast(101%);
+    -webkit-filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(84deg) brightness(107%) contrast(101%);
 }
 
 #cross .bar1 {
