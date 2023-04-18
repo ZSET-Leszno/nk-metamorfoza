@@ -143,28 +143,28 @@
         </span>
         <div id="cards" class="wrap">
             <div class="card pre-card">
-                <img src="img/media/11.jpg" alt="obraz">
+                <img onclick="modal(this.src);" src="img/media/11.jpg" alt="obraz">
             </div>
             <div class="card pre-card">
-                <img src="img/media/2.jpg" alt="obraz">
+                <img onclick="modal(this.src);" src="img/media/2.jpg" alt="obraz">
             </div>
             <div class="card pre-card">
-                <img src="img/media/4.jpg" alt="obraz">
+                <img onclick="modal(this.src);" src="img/media/4.jpg" alt="obraz">
             </div>
             <div class="card pre-card">
-                <img src="img/media/10.jpg" alt="obraz">
+                <img onclick="modal(this.src);" src="img/media/10.jpg" alt="obraz">
             </div>
             <div class="card pre-card">
-                <img src="img/media/5.jpg" alt="obraz">
+                <img onclick="modal(this.src);" src="img/media/5.jpg" alt="obraz">
             </div>
             <div class="card pre-card">
-                <img src="img/media/9.jpg" alt="obraz">
+                <img onclick="modal(this.src);" src="img/media/9.jpg" alt="obraz">
             </div>
             <div class="card pre-card">
-                <img src="img/media/1.jpg" alt="obraz">
+                <img onclick="modal(this.src);" src="img/media/1.jpg" alt="obraz">
             </div>
             <div class="card pre-card">
-                <img src="img/media/12.jpg" alt="obraz">
+                <img onclick="modal(this.src);" src="img/media/12.jpg" alt="obraz">
             </div>
         </div>
         <footer>
@@ -218,6 +218,15 @@
             <span>NK Metamorfoza &copy; Wszelkie prawa zastrzeżone | NIP: 6972387521</span>
         </div>
     </main>
+    <div id="modal">
+        <div id="modal-inner">
+            <div onclick="document.getElementById('modal').style = ''" id="cross">
+                <div class="bar1"></div>
+                <div class="bar3"></div>
+            </div>
+            <img id="modalimage" src="img/media/10.jpg" alt="zdjecie">
+        </div>
+    </div>
     <script src="index.js"></script>
     <script src="navside.js"></script>
 </body>

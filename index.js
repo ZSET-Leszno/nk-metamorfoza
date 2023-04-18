@@ -134,3 +134,8 @@ function hide() {
     document.getElementById('services-inner').style = 'transform: translate(0); -webkit-transform: translate(0);';
     document.getElementById('searched').innerHTML = '';
 }
+
+function modal(source) {
+    document.getElementById("modal").style = "display: flex;";
+    document.getElementById("modalimage").src = source;
+}
